@@ -1,6 +1,4 @@
 ---
-title: Welcome to Quartz
+title: Welcome to NyaWiki
 ---
-
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+NyaWiki is an attempt at an centralized place for Babric/StationAPI related wikies.
