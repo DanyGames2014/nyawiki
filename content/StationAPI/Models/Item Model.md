@@ -18,8 +18,12 @@ Some models we could use as a parent are :
 *TODO : Explain texture layers*
 *TODO: Explain display*
 *TODO: Link <https://minecraft.wiki/w/Tutorials/Models>*
+*TODO: Add pictures to compare the different default models*
+*TODO: Just in general.. add pictures*
   
 ### Default StationAPI Item Model Parents
+These models can also be found [here](https://github.com/ModificationStation/StationAPI/tree/master/station-renderer-api-v0/src/main/resources/assets/minecraft/stationapi/models/item)
+
 `item/generated`  
 `item/handheld`  
 `item/handheld_rod`
