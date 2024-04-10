@@ -8,17 +8,27 @@ However when StationAPI discovers a lang file it automatically adds the namespac
 ### Translation Key Formats
 
 #### Minecraft
-| Object Type             | Translation Key Format                       |
-| ----------------------- | -------------------------------------------- |
-| Block Name              | tile.<registry_name>.name                    |
-| Item Name               | item.<registry_name>.name                    |
-| Dimension Entering      | dim.<registry_name>.entering                 |
-| Dimension Leaving       | dim.<registry_name>.leaving                  |
-| Achievement Page        | stationapi\\:achievementPage.<registry_name> |
-| Achievement Name        | achievement.<registry_name>                  |
-| Achievement Description | achievement.<registry_name>.desc             |
+
+| Object Type             | Translation Key Format                       | Example Key                            |
+| ----------------------- | -------------------------------------------- | -------------------------------------- |
+| Block Name              | tile.<registry_name>.name                    | tile.example_block.name                |
+| Item Name               | item.<registry_name>.name                    | item.example_item.name                 |
+| Dimension Entering      | dim.<registry_name>.entering                 | dim.example_dim.entering               |
+| Dimension Leaving       | dim.<registry_name>.leaving                  | dim.example_dim.leaving                |
+| Achievement Page        | stationapi\\:achievementPage.<registry_name> | stationapi\\:achievementPage.main_page |
+| Achievement Name        | achievement.<registry_name>                  | achievement.example_achievement        |
+| Achievement Description | achievement.<registry_name>.desc             | achievement.example_achievement.desc   |
+
 
 #### BH Creative
-| Object Type       | Translation Key Format   |
-| ----------------- | ------------------------ |
-| Creative Tab Name | tab.<registry_name>.name |
+
+| Object Type       | Translation Key Format   | Example Key             |
+| ----------------- | ------------------------ | ----------------------- |
+| Creative Tab Name | tab.<registry_name>.name | tab.example_blocks.name |
+
+
+#### Spawn Eggs
+
+| Object Type           | Translation Key Format      | Example Key           |
+| --------------------- | --------------------------- | --------------------- |
+| Spawn Egg Entity Name | entity.<registry_name>.name | entity.pigzombie.name |
