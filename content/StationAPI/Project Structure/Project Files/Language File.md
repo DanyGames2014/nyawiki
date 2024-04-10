@@ -27,7 +27,7 @@ However when StationAPI discovers a lang file it automatically adds the namespac
 | Creative Tab Name | tab.<registry_name>.name | tab.example_blocks.name |
 
 
-#### Spawn Eggs
+#### [[Spawn Eggs]]
 
 | Object Type           | Translation Key Format      | Example Key           |
 | --------------------- | --------------------------- | --------------------- |
