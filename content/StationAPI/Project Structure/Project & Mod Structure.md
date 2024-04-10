@@ -36,15 +36,16 @@ Mostly stores temporary files used when building, except the `build/libs` direct
 ##### gradle
 Contains the gradlew wrapper jar, you only need to touch this when updating the project gradle to a newer version
 ##### run
-This is where the Minecraft Client and Minecraft Server are ran in when launching them in an IDE so it contains your saves, server.properties, configs etc.
+This is where the Minecraft Client and Minecraft Server are ran in when launching them in an IDE so it contains your saves, server.properties, configs etc. 
 ##### src
-This folder contains the source files and assets of your mod, this is described more in-depth in the **Mod Structure** part of this page
+This folder contains the source files and assets of your mod, this is described more in-depth in the **Mod Structure** part of this page.
+By default it only contains the `main` folder where your mod itself is, however, you can also create a `test` folder which can house a test mod which when launched will also load your main mod as a dependency. This is useful for example for testing library mods where you can create the library and then in the test mod you create features that use your library without having to remove them afterward as only the main mod will be included in the mod jar when you build your project.
 ##### .gitignore
 This is a file used by the Git versioning system where you can specify which files should not be synced thru Git. For example this is used to not sync cache files, run files, individual IDE settings etc.
 ##### build.gradle
 The Gradle Build file is probably the most important file in a gradle project. You will mostly specify your dependencies and mappings here, aswell as update Babric Loom when needed.
 ##### gradle.properties
-This file exists so you don't have to comb through the build.gradle file to change dependency version etc. In the buid.gradle file you can specify a placeholder like `${project.nya}` and then in the gradle.properties file you can assign that placeholder a value like this `nya=wowzie` which will then be used when the project is refreshed or built.
+This file exists so you don't have to comb through the build.gradle file to change dependency version etc. In the build.gradle file you can specify a placeholder like `${project.nya}` and then in the gradle.properties file you can assign that placeholder a value like this `nya=wowzie` which will then be used when the project is refreshed or built.
 ##### gradlew
 This is the gradle shell script for POSIX compliant systems (BSD/Linux/MacOS etc.) 
 ##### gradlew.bat
