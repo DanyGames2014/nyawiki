@@ -20,7 +20,7 @@ However when StationAPI discovers a lang file it automatically adds the namespac
 | Achievement Description | achievement.<registry_name>.desc             | achievement.example_achievement.desc   |
 
 
-#### BH Creative
+#### [[BH Creative]]
 
 | Object Type       | Translation Key Format   | Example Key             |
 | ----------------- | ------------------------ | ----------------------- |
