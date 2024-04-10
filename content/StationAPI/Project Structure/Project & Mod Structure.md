@@ -69,7 +69,7 @@ This part is about the mod structure itself and describes the file and folder st
 		* examplemod
 			* stationapi
 				* lang
-					* en_US.lang
+					* [en_US.lang](StationAPI/Project%20Structure/Project%20Files/Language%20File)
 				* blockstates
 					* example_block.json
 				* models
