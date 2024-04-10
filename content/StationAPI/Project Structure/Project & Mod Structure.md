@@ -82,7 +82,7 @@ This part is about the mod structure itself and describes the file and folder st
 					* item
 						* example_item.png
 					* block
-						* eaxmple_block_top.png
+						* example_block_top.png
 						* example_block_side.png
 				* sounds
 					* sounds
