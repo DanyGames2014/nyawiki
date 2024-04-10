@@ -58,14 +58,59 @@ This is usually where you include a short description of your mod, build instruc
 This file contains some settings for gradle itself, in StAPI workspace it is used to specify plugin repositories.
 
 ## Mod Structure
-*!WIP!*
+This part is about the mod structure itself and describes the file and folder structure which will be located under either `src/main` or `src/test`
+
 * java
 	* net
 		* danygames2014
-			* tropicraft
+			* examplemod
 * resources
 	* assets
-		* tropicraft
+		* examplemod
+			* stationapi
+				* lang
+					* en_US.lang
+				* blockstates
+					* example_block.json
+				* models
+					* item
+						* example_item.json
+					* block
+						* example_block_normal.json
+						* example_block_variant.json
+				* textures
+					* item
+						* example_item.png
+					* block
+						* eaxmple_block_top.png
+						* example_block_side.png
+				* sounds
+					* sounds
+						* sound
+							* example_entity
+								* nya.ogg
+			* textures
+				* entities
+					* example_entity_texture.png
+			* icon.png
 	* data
+		* examplemod
+			* stationapi
+				* recipes
+					* crafting
+						* example_crafting_recipe.json
+					* smelting
+						* example_smelting_recipe.json
+				* tags
+					* blocks
+						* example_block_tag.json
+					* items
+						* example_item_tag.json
+		* minecraft
+			* stationapi
+				* tags
+					* blocks
+						* mineable
+							* pickaxe.json
 	* fabric.mod.json
-	* tropicraft.mixins.json
+	* examplemod.mixins.json
