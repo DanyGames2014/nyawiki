@@ -62,9 +62,9 @@ These models can also be found [here](https://github.com/ModificationStation/Sta
 [Minecraft Wiki/Tutorials/Models](https://minecraft.wiki/w/Tutorials/Models) - Due to StationAPI using the modern specifications for models, this tutorial on the Minecraft Wiki is mostly applicable to it
 
 **Examples :**
-[StationAPI Test Mod Item Models](https://github.com/ModificationStation/StationAPI/tree/master/src/test/resources/assets/sltest/stationapi/models/item)
-[Tropicraft Item Models](https://github.com/DanyGames2014/Tropicraft/tree/master/src/main/resources/assets/tropicraft/stationapi/models/item)
-[BetterNetherBeta Item Models](https://github.com/paulevsGitch/BetterNetherBeta/tree/stapi-2.0/src/main/resources/assets/bnb/stationapi/models/item)
+[StationAPI Test Mod Item Models](https://github.com/ModificationStation/StationAPI/tree/master/src/test/resources/assets/sltest/stationapi/models/item)  
+[Tropicraft Item Models](https://github.com/DanyGames2014/Tropicraft/tree/master/src/main/resources/assets/tropicraft/stationapi/models/item)  
+[BetterNetherBeta Item Models](https://github.com/paulevsGitch/BetterNetherBeta/tree/stapi-2.0/src/main/resources/assets/bnb/stationapi/models/item)  
 
 
 ### TODO
