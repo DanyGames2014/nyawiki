@@ -8,10 +8,10 @@ Let's start with a simple block model. A block model does not neccessarily need 
 }
 ```
 
-Some models we could use as a parent are:
-`block/cube` - This is one of the most basic models supplied by StationAPI, it is a cube on which you can specify a texture for each side, however we haven't supplied one so it would just have the default texture.
-`minecraft:block/dirt` - This specifies the `dirt` block from Minecraft as our parent, which will make our block inherit all of its properties making it look exactly like it.
-`examplemod:block/example_block` - This will specify the `example_block` from `examplemod` as the parent for the block, making it look exactly like it.
+Some models we could use as a parent are:  
+`block/cube` - This is one of the most basic models supplied by StationAPI, it is a cube on which you can specify a texture for each side, however we haven't supplied one so it would just have the default texture.  
+`minecraft:block/dirt` - This specifies the `dirt` block from Minecraft as our parent, which will make our block inherit all of its properties making it look exactly like it.  
+`examplemod:block/example_block` - This will specify the `example_block` from `examplemod` as the parent for the block, making it look exactly like it.  
 
 > [!info] Note: You do not have to specify `minecraft` as the namespace, if there is no namespace then the minecraft namespace is used. This means that the first example will be interpreted as `minecraft:block/cube`
 
