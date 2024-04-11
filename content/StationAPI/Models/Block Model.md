@@ -31,14 +31,14 @@ We have now made a block which has the `examplemod:block/example_block` texture 
 
 Let's look at some other model parents we can use and their placeholders :
 
-| Model Parent          | Placeholders                              |
-| --------------------- | ----------------------------------------- |
-| block/cross           | \#cross                                   |
-| block/cube            | \#up \#down \#north \#south \#east \#west |
-| block/cube_all        | \#all                                     |
-| block/cube_bottom_top | \#top \#bottom \#side                     |
-| block/cube_column     | \#end \#side                              |
-| block/cube_top        | \#top \#side                              |
+| Model Parent          | Placeholders                                    |
+| --------------------- | ----------------------------------------------- |
+| block/cross           | `#cross`                                        |
+| block/cube            | `#up` `#down` `#north` `#south` `#east` `#west` |
+| block/cube_all        | `#all`                                          |
+| block/cube_bottom_top | `#top` `#bottom` `#side`                        |
+| block/cube_column     | `#end` `#side`                                  |
+| block/cube_top        | `#top` `#side`                                  |
 
 There are more than these ones, but in majority of the cases these will be enough.  
 
@@ -73,8 +73,10 @@ Worth mentioning is also the `block/cross` model, which is mostly used for makin
   }
 }
 ```
-Here you can see the texture and the resulting block:  
+Here you can see the texture and the resulting block ingame:  
 ![](bamboo_shoot_256.png) ![](bamboo_shoot_ingame.png)
+
+
 ### Advanced Block Models
 *TODO*
 
