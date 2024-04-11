@@ -13,7 +13,7 @@ Some models we could use as a parent are :
 `examplemod:item/example_item` - This specifies the item model of `example_item` as the parent of our model, this will make our item look exactly as the Example Item  
 `examplemod:block/example_block` - This will specify the **block** model of `example_block` as the parent of our item, which means that the item will look as a block item, think of Dirt block item for example, just a standard block.
 
-> [!info] Note: You do not have to specify `minecraft` as the namespace, if there is no namespace then it the minecraft namespace is used. This means that the first example will be interpreted as `minecraft:item/generated`
+> [!info] Note: You do not have to specify `minecraft` as the namespace, if there is no namespace then the minecraft namespace is used. This means that the first example will be interpreted as `minecraft:item/generated`
 
 ### Adding Texture
 Now its time to add a texture to our item, but first we need to understand the concept of layers, most items are just a single layer texture, but StationAPI allows you to "composite" an item texture from multiple layers. The advantage of layers is that they can be individually colorized.  
