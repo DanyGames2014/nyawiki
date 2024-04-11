@@ -74,7 +74,7 @@ This part is about the mod structure itself and describes the file and folder st
 					* example_block.json
 				* models
 					* item
-						* example_item.json
+						* [example_item.json](StationAPI/Models/Item%20Model)
 					* block
 						* example_block_normal.json
 						* example_block_variant.json

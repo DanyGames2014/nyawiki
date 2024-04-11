@@ -49,14 +49,25 @@ Now lets look at how we would add more layers :
 ```
 As you can see, adding another layer is as simple as adding another entry under `textures` with the name `layerN` where the N is the number of our layer, starting at zero. This model will composite the `example_item_layer0.png` and `example_item_layer1.png` textures and the resulting texture will be the texture for our item.
 
-*TODO: Explain display*
-*TODO: Link <https://minecraft.wiki/w/Tutorials/Models>*
-*TODO: Add pictures to compare the different default models*
-*TODO: Just in general.. add pictures*
-  
+> [!info] Note: StationAPI allows loading HD textures, just thought I might mention it since it isn't inmediately obvious :-)
+
 ### Default StationAPI Item Model Parents
 These models can also be found [here](https://github.com/ModificationStation/StationAPI/tree/master/station-renderer-api-v0/src/main/resources/assets/minecraft/stationapi/models/item)
 
 `item/generated`  
 `item/handheld`  
 `item/handheld_rod`
+
+### External Resources
+[Minecraft Wiki/Tutorials/Models](https://minecraft.wiki/w/Tutorials/Models) - Due to StationAPI using the modern specifications for models, this tutorial on the Minecraft Wiki is mostly applicable to it
+
+**Examples :**
+[StationAPI Test Mod Item Models](https://github.com/ModificationStation/StationAPI/tree/master/src/test/resources/assets/sltest/stationapi/models/item)
+[Tropicraft Item Models](https://github.com/DanyGames2014/Tropicraft/tree/master/src/main/resources/assets/tropicraft/stationapi/models/item)
+[BetterNetherBeta Item Models](https://github.com/paulevsGitch/BetterNetherBeta/tree/stapi-2.0/src/main/resources/assets/bnb/stationapi/models/item)
+
+
+### TODO
+*TODO: Explain display*
+*TODO: Add pictures to compare the different default models*
+*TODO: Just in general.. add pictures*
