@@ -21,7 +21,7 @@ Below you can find an example structure of a project along with descriptions of 
 	* gradle.properties
 	* gradlew
 	* gradlew.bat
-	* [[LICENSE]]
+	* LICENSE
 	* README.md
 	* settings.gradle
 
@@ -51,7 +51,7 @@ This is the gradle shell script for POSIX compliant systems (BSD/Linux/MacOS etc
 ##### gradlew.bat
 This is the gradle shell script for Windows
 ##### LICENSE
-This is the standard file in which your license should be specified. If no license is specified the project is generally assumed to be under the All Rights Reserved license.
+This is the standard file in which your license should be specified. If no license is specified the project is generally assumed to be under the All Rights Reserved license. I recommend heading over to [Choose a License](https://choosealicense.com) and choosing a license that suits your needs. My personal recommendation is MIT.
 ##### README.md
 This is usually where you include a short description of your mod, build instructions and maybe even point to a wiki. This is also the file which gets rendered on GitHub on the project page.
 ##### settings.gradle
@@ -69,15 +69,15 @@ This part is about the mod structure itself and describes the file and folder st
 		* examplemod
 			* stationapi
 				* lang
-					* [en_US.lang](StationAPI/Project%20Structure/Project%20Files/Language%20File)
+					* [en_US.lang](Language%20File.md)
 				* blockstates
-					* example_block.json
+					* [example_block.json](StationAPI/Block%20States/Block%20State)
 				* models
 					* item
-						* [example_item.json](StationAPI/Models/Item%20Model)
+						* [example_item.json](Item%20Model.md)
 					* block
-						* [example_block_normal.json](StationAPI/Models/Block%20Model)
-						* [example_block_variant.json](StationAPI/Models/Block%20Model)
+						* [example_block_normal.json](Block%20Model.md)
+						* [example_block_variant.json](Block%20Model.md)
 				* textures
 					* item
 						* example_item.png
