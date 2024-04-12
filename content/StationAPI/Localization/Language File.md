@@ -18,7 +18,7 @@ However when StationAPI discovers a lang file it automatically adds the namespac
 | Achievement Page        | stationapi\\:achievementPage.<registry_name> | stationapi\\:achievementPage.main_page |
 | Achievement Name        | achievement.<registry_name>                  | achievement.example_achievement        |
 | Achievement Description | achievement.<registry_name>.desc             | achievement.example_achievement.desc   |
-| Keybind Name            | key.<                                        |                                        |
+| Keybind Name            | key.<registry_name>                          | key.example_key                        |
 
 
 #### [[BH Creative]]
