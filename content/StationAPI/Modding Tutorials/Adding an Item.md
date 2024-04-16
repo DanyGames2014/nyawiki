@@ -2,6 +2,7 @@ In this tutorial you will learn how to add an item to the game, as well as textu
 
 When creating items, some of these templates might actually be sufficient, other time you might wanna alter the behaviour of the item in which we will extend the Template and add our required changes, we will go over both ways as after the item is initialized the procedure is the same.  
 
+## Creating the Item
 ### 1. Creating our own Item class (Optional)
 First we want to decide what Item we want to extend, we will just be extending the basic Item. So let's create a new class that extends `TemplateItem` and implement constructor.  
 
