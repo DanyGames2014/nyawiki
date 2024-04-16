@@ -1,1 +1,0 @@
-Tropicraft is a mod adding many tropical themed blocks, items and a tropical dimensions called The Tropics.
