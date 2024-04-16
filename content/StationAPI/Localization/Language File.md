@@ -5,7 +5,7 @@ It follows a pretty simple format of one translation per line in the following f
 ## Translation Key
 The translation keys ( *mostly :-)* ) follow the following format : `<type>.<namespace>.<path>`. For example `dim.tropicraft.tropics.entering` or `item.tropicraft.bamboo.name`   
 
-When writing the language file you can use the `@` (at) placeholder instead of having to write your mod's namespace, this placeholder will get replaced with the namespace that the lang file was discovered in. So instead of typing `tile.examplemod.example_block.name` you can type `tile.@.example_block.name`  
+When writing the language file you can use the `@` placeholder instead of having to write your mod's namespace, this placeholder will get replaced with the namespace that the lang file was discovered in. So instead of typing `tile.examplemod.example_block.name` you can type `tile.@.example_block.name`  
 
 ### Translation Key Formats
 
