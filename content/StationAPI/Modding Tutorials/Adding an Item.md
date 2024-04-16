@@ -44,3 +44,5 @@ public class ExampleMod {
 	}
 }
 ```
+
+So, what have we done here ? We have create an utility field holding our namespace. You can call the `id` method on a `Namespace` 
