@@ -1,4 +1,4 @@
-Recipes in StationAPI are data driven and defined in the JSON format. StationAPI expects your recipes to be in the `src/main/resources/data/<modid>/stationapi/recipes/` folder, you can then use subfolders like `crafting`, `smelting` etc. to organize your recipes further, but it is not strictly necessary.  
+Data Driven Recipes in StationAPI are defined in the JSON format. StationAPI expects your recipes to be in the `src/main/resources/data/<modid>/stationapi/recipes/` folder, you can then use subfolders like `crafting`, `smelting` etc. to organize your recipes further, but it is not strictly necessary.  
 
 By default there are 3 crafting recipe types:  
 `minecraft:crafting_shaped` - A recipe in the Crafting Table where the shape of the ingredients matters  

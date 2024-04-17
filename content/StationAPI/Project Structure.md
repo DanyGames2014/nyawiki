@@ -98,10 +98,10 @@ This part is about the mod structure itself and describes the file and folder st
 			* stationapi
 				* recipes
 					* crafting
-						* [example_crafting_recipe_shaped.json](Recipes.md#Shaped%20Crafting%20Recipe) 
-						* [example_crafting_recipe_shapeless.json](Recipes.md#Shapeless%20Crafting%20Recipe)
+						* [example_crafting_recipe_shaped.json](Data%20Driven%20Recipes.md#Shaped%20Crafting%20Recipe) 
+						* [example_crafting_recipe_shapeless.json](Data%20Driven%20Recipes.md#Shapeless%20Crafting%20Recipe)
 					* smelting
-						* [example_smelting_recipe.json](Recipes.md#Smelting%20Recipe)
+						* [example_smelting_recipe.json](Data%20Driven%20Recipes.md#Smelting%20Recipe)
 				* tags
 					* blocks
 						* example_block_tag.json
