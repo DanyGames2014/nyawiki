@@ -19,7 +19,7 @@ When writing the language file you can use the `@` placeholder instead of having
 | Dimension Leaving       | dim.\<namespace>.<registry_name>.leaving                    |
 | Achievement Page        | gui.stationapi.achievementPage.\<namespace>.<registry_name> |
 | Achievement Name        | achievement.\<namespace>.<registry_name>                    |
-| Achievement Description | achievement.\<namspace>.<registry_name>.desc                |
+| Achievement Description | achievement.\<namespace>.<registry_name>.desc               |
 | Keybind Name            | key.\<namespace>.<registry_name>                            |
 >[!info] Keys added by StationAPI are namespaced more than once
 
