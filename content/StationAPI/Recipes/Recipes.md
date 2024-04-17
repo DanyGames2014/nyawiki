@@ -6,7 +6,7 @@ By default there are 3 crafting recipe types:
 `minecraft:smelting` - A recipe in the Furnace where 1 item is smelted into another  
 
 ### Shaped Crafting Recipe
-A shaped crafting recipe requires you to specify a pattern with the accompanying keys and a result, let's look at an example recipe:
+A shaped crafting recipe requires you to specify a pattern with the accompanying keys and a result, let's look at an example recipe:  
 [resources/data/examplemod/stationapi/recipes/crafting/example_crafting_recipe_shaped.json](https://github.com/DanyGames2014/nyawiki-example-mod/blob/master/src/main/resources/data/examplemod/stationapi/recipes/crafting/example_crafting_recipe_shaped.json)
 
 ```json
@@ -51,7 +51,7 @@ Let's break this example down:
 
 `result` - this is the output of the crafting recipe, its very similar to the item in key. You specify the item registry name under `item`, then you can also define the amount of the items crafted with `count` and the meta of the item using `damage`  
 
-And here is the result:
+And here is the result:  
 ![](shaped_crafting_recipe.png)
 &nbsp;  
 ### Shapeless Crafting Recipe  
@@ -93,7 +93,7 @@ And here is the result:
 ![](shapeless_crafting_recipe.png)
 &nbsp;  
 ### Smelting Recipe  
-A smelting recipe is very similar to a shapeless recipe but it only requires a single ingredient, let's look at an example:
+A smelting recipe is very similar to a shapeless recipe but it only requires a single ingredient, let's look at an example:  
 [resources/data/examplemod/stationapi/recipes/smelting/example_smelting_recipe.json](https://github.com/DanyGames2014/nyawiki-example-mod/blob/master/src/main/resources/data/examplemod/stationapi/recipes/smelting/example_smelting_recipe.json)  
 ```json
 {
@@ -116,7 +116,7 @@ Let's break this example down:
 
 `result` - this is the output of the recipe, its very similar to the item in ingredient. You specify the item registry name under `item`, then you can also define the amount of the items made with `count` and the meta of the item using `damage`  
 
-And here is the result:
+And here is the result:  
 ![](smelting_recipe.png)
 &nbsp;  
 
