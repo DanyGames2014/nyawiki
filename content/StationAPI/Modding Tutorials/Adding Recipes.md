@@ -92,32 +92,59 @@ Code driven recipes are defined programmatically and need to be registered using
 ### Shapeless Recipe
 Shapeless Recipe doesn't care about the order of the items put into the crafting table, it only cares that the correct ingredients are supplied.     
 
-To create a shapeless crafting recipe you need to use the `CraftingRegistry.addShapelessRecipe` method during the `RecipeRegisterEvent.Vanilla.CRAFTING_SHAPELESS` event.  
+To create a shapeless crafting recipe you need to use the `CraftingRegistry.addShapelessRecipe` method during the `RecipeRegisterEvent.Vanilla.CRAFTING_SHAPELESS` event.  You can read more about this [here](Code%20Driven%20Recipes.md#Shapeless%20Recipe)  
 
 ```java
-// Example Here
+@EventListener  
+public void registerRecipes(RecipeRegisterEvent event) {  
+    RecipeRegisterEvent.Vanilla type = RecipeRegisterEvent.Vanilla.fromType(event.recipeId);  
+  
+    if (type == RecipeRegisterEvent.Vanilla.CRAFTING_SHAPELESS) {  
+        CraftingRegistry.addShapelessRecipe(new ItemStack(Item.PAPER, 14), Item.APPLE, Block.DIAMOND_BLOCK);  
+    }  
+}
 ```
 
+And here is the result:  
+![](code_shapeless_recipe.png)
 &nbsp;
 ### Shaped Recipe
 Shaped Recipe does care about the order of the ingredients in the crafting grid.  
 
-To create a shapeless crafting recipe you need to use the `CraftingRegistry.addShapedRecipe` method during the `RecipeRegisterEvent.Vanilla.CRAFTING_SHAPED` event  
+To create a shapeless crafting recipe you need to use the `CraftingRegistry.addShapedRecipe` method during the `RecipeRegisterEvent.Vanilla.CRAFTING_SHAPED` event. You can read more about this [here](Code%20Driven%20Recipes.md#Shaped%20Recipe)  
 
 ```java
-// Example Here
+@EventListener  
+public void registerRecipes(RecipeRegisterEvent event) {  
+    RecipeRegisterEvent.Vanilla type = RecipeRegisterEvent.Vanilla.fromType(event.recipeId);  
+  
+    if (type == RecipeRegisterEvent.Vanilla.CRAFTING_SHAPED) {  
+        CraftingRegistry.addShapedRecipe(new ItemStack(Item.BONE, 42), "owo", "w w", "owo", 'o', new ItemStack(ExampleMod.exampleItem), 'w', new ItemStack(Block.DIAMOND_BLOCK));  
+    }
+}
 ```
 
+And here is the result:
+![](code_shaped_recipe.png)
 &nbsp;
 ### Smelting Recipe
 Smelting Recipe only has a single input and output.  
 
-To create a smelting recipe you need to use the `SmeltingRegistry.addSmeltingRecipe` method during the `RecipeRegisterEvent.Vanilla.SMELTING`  event
+To create a smelting recipe you need to use the `SmeltingRegistry.addSmeltingRecipe` method during the `RecipeRegisterEvent.Vanilla.SMELTING` event. You can read more about this [here](Code%20Driven%20Recipes.md#Smelting%20Recipe)  
 
 ```java
-// Example Here
+@EventListener  
+public void registerRecipes(RecipeRegisterEvent event) {  
+    RecipeRegisterEvent.Vanilla type = RecipeRegisterEvent.Vanilla.fromType(event.recipeId);  
+  
+    if (type == RecipeRegisterEvent.Vanilla.SMELTING) {  
+        SmeltingRegistry.addSmeltingRecipe(new ItemStack(Item.FLINT), new ItemStack(Block.BROWN_MUSHROOM, 8));  
+    }  
+}
 ```
 
+And here is the result:  
+![](code_smelting_recipe.png)
 &nbsp;
 ### External Resources:
 ##### Data Driven Recipes:
