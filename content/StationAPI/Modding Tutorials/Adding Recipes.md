@@ -124,7 +124,7 @@ public void registerRecipes(RecipeRegisterEvent event) {
 }
 ```
 
-And here is the result:
+And here is the result:  
 ![](code_shaped_recipe.png)
 &nbsp;
 ### Smelting Recipe
