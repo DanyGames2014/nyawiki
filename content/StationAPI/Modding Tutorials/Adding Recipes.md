@@ -89,7 +89,7 @@ And here is the result:
  &nbsp;
 ## Adding [Code Driven](Code%20Driven%20Recipes.md) Recipes
 Code driven recipes are defined programmatically and need to be registered using the `RecipeRegisterEvent`
-### Shapeless Recipe
+### [Shapeless Recipe](Code%20Driven%20Recipes.md#Shapeless%20Recipe)
 Shapeless Recipe doesn't care about the order of the items put into the crafting table, it only cares that the correct ingredients are supplied.     
 
 To create a shapeless crafting recipe you need to use the `CraftingRegistry.addShapelessRecipe` method during the `RecipeRegisterEvent.Vanilla.CRAFTING_SHAPELESS` event.  You can read more about this [here](Code%20Driven%20Recipes.md#Shapeless%20Recipe)  
@@ -108,7 +108,7 @@ public void registerRecipes(RecipeRegisterEvent event) {
 And here is the result:  
 ![](code_shapeless_recipe.png)
 &nbsp;
-### Shaped Recipe
+### [Shaped Recipe](Code%20Driven%20Recipes.md#Shaped%20Recipe)
 Shaped Recipe does care about the order of the ingredients in the crafting grid.  
 
 To create a shapeless crafting recipe you need to use the `CraftingRegistry.addShapedRecipe` method during the `RecipeRegisterEvent.Vanilla.CRAFTING_SHAPED` event. You can read more about this [here](Code%20Driven%20Recipes.md#Shaped%20Recipe)  
@@ -127,7 +127,7 @@ public void registerRecipes(RecipeRegisterEvent event) {
 And here is the result:  
 ![](code_shaped_recipe.png)
 &nbsp;
-### Smelting Recipe
+### [Smelting Recipe](Code%20Driven%20Recipes.md#Smelting%20Recipe)
 Smelting Recipe only has a single input and output.  
 
 To create a smelting recipe you need to use the `SmeltingRegistry.addSmeltingRecipe` method during the `RecipeRegisterEvent.Vanilla.SMELTING` event. You can read more about this [here](Code%20Driven%20Recipes.md#Smelting%20Recipe)  
@@ -158,6 +158,6 @@ And here is the result:
 [Better Nether Beta Recipes](https://github.com/paulevsGitch/BetterNetherBeta/tree/stapi-2.0/src/main/resources/data/bnb/stationapi/recipes)  
 
 ##### Code Driven Recipes:
-**Examples:**
-[NyaWiki Example Mod](https://github.com/DanyGames2014/nyawiki-example-mod/blob/master/src/main/java/net/danygames2014/examplemod/event/RecipeListener.java)  
+**Examples:**  
+[NyaWiki Example Mod](https://github.com/DanyGames2014/nyawiki-example-mod/blob/master/src/main/java/net/danygames2014/examplemod/event/RecipeListener.java)    
 [StationAPI Test Mod](https://github.com/ModificationStation/StationAPI/blob/master/src/test/java/net/modificationstation/sltest/recipe/RecipeListener.java)  
