@@ -108,7 +108,7 @@ And here is the result of this recipe:
 
 &nbsp;  
 ### External Recources
-**Examples:**
-[NyaWiki Example Mod](https://github.com/DanyGames2014/nyawiki-example-mod/blob/master/src/main/java/net/danygames2014/examplemod/event/RecipeListener.java)
-[StationAPI Test Mod](https://github.com/ModificationStation/StationAPI/blob/master/src/test/java/net/modificationstation/sltest/recipe/RecipeListener.java)
+**Examples:**  
+[NyaWiki Example Mod](https://github.com/DanyGames2014/nyawiki-example-mod/blob/master/src/main/java/net/danygames2014/examplemod/event/RecipeListener.java)  
+[StationAPI Test Mod](https://github.com/ModificationStation/StationAPI/blob/master/src/test/java/net/modificationstation/sltest/recipe/RecipeListener.java)  
 

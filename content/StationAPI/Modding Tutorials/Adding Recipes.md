@@ -132,5 +132,5 @@ To create a smelting recipe you need to use the `SmeltingRegistry.addSmeltingRec
 
 ##### Code Driven Recipes:
 **Examples:**
-[NyaWiki Example Mod](https://github.com/DanyGames2014/nyawiki-example-mod/blob/master/src/main/java/net/danygames2014/examplemod/event/RecipeListener.java)
-[StationAPI Test Mod](https://github.com/ModificationStation/StationAPI/blob/master/src/test/java/net/modificationstation/sltest/recipe/RecipeListener.java)
+[NyaWiki Example Mod](https://github.com/DanyGames2014/nyawiki-example-mod/blob/master/src/main/java/net/danygames2014/examplemod/event/RecipeListener.java)  
+[StationAPI Test Mod](https://github.com/ModificationStation/StationAPI/blob/master/src/test/java/net/modificationstation/sltest/recipe/RecipeListener.java)  
