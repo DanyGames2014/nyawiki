@@ -119,3 +119,18 @@ To create a smelting recipe you need to use the `SmeltingRegistry.addSmeltingRec
 ```
 
 &nbsp;
+### External Resources:
+##### Data Driven Recipes:
+[Minecraft Wiki/Recipe](https://minecraft.wiki/w/Recipe) - Since StationAPI uses the modern data driven recipes, the basics of this are applicable, altho many of the things are straight up non-existent in Beta  
+[Fabric Wiki/Crafting Recipes](https://fabricmc.net/wiki/tutorial:recipes) - This is also somewhat applicable, altho not really comprehensive  
+
+**Examples:**  
+[Tropicraft Recipes](https://github.com/DanyGames2014/Tropicraft/tree/master/src/main/resources/data/tropicraft/stationapi/recipes)  
+[StationAPI Test Mod Recipes](https://github.com/ModificationStation/StationAPI/tree/master/src/test/resources/data/sltest/stationapi/recipes)  
+[NyaWiki Example Mod Recipes](https://github.com/DanyGames2014/nyawiki-example-mod/tree/master/src/main/resources/data/examplemod/stationapi/recipes)  
+[Better Nether Beta Recipes](https://github.com/paulevsGitch/BetterNetherBeta/tree/stapi-2.0/src/main/resources/data/bnb/stationapi/recipes)  
+
+##### Code Driven Recipes:
+**Examples:**
+[NyaWiki Example Mod](https://github.com/DanyGames2014/nyawiki-example-mod/blob/master/src/main/java/net/danygames2014/examplemod/event/RecipeListener.java)
+[StationAPI Test Mod](https://github.com/ModificationStation/StationAPI/blob/master/src/test/java/net/modificationstation/sltest/recipe/RecipeListener.java)
