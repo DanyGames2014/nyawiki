@@ -146,7 +146,7 @@ public void registerRecipes(RecipeRegisterEvent event) {
 And here is the result:  
 ![](code_smelting_recipe.png)
 &nbsp;
-### External Resources:
+## External Resources:
 ##### Data Driven Recipes:
 [Minecraft Wiki/Recipe](https://minecraft.wiki/w/Recipe) - Since StationAPI uses the modern data driven recipes, the basics of this are applicable, altho many of the things are straight up non-existent in Beta  
 [Fabric Wiki/Crafting Recipes](https://fabricmc.net/wiki/tutorial:recipes) - This is also somewhat applicable, altho not really comprehensive  
