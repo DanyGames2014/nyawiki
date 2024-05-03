@@ -37,12 +37,12 @@ key.@.example_keybind=Example Keybind
 
 > [!info] You can see that the translation key follows the format of `key.<namespace>.name` and we can either specify the namespace manually or use `@` and let StationAPI figure it out.  
 
-&nbsp  
+&nbsp;  
 Now when we load up the game we will see that our keybind has loaded succesfully  
 ![](keybind_controls_menu.png)  
 > [!warning] The vanilla controls screen doesn't handle many keybinds well and with a few extra keybinds they will start getting off the screen. You can use a mod like [UniTweaks](https://modrinth.com/mod/unitweaks) which implements a scrollable controls screen similar to the one implemented in Release 1.7
 
-&nbsp  
+&nbsp;  
 
 ## Listening to the Keybind
 You can listen to the keybind pretty much anywhere, but you have to keep in mind that some methods might not be called often enough to catch a keypress and that you need to make sure you are only listening to keybinds on the client.  
@@ -83,6 +83,8 @@ Let's also look at the 2 methods from Keyboard we used:
 `Keyboard.getEventKeyState` - This method will return `true` if the key was pressed and `false` if it was released, we use this to only trigger action once on a keypress  
 `Keyboard.isKeyDown(int keycode)` - This method will tell us if the key with the supplied keycode has been pressed  
 
+&nbsp;  
+
 ## Accessing more context
 Since we listen for the keypresses in a dedicated listener, the amount of stuff we can access is quite limited. This can however be solved using the `FabricLoader` as outlined [here](Fabric%20Loader.md). This will net us access to pretty much everything including the World and Player.
 
@@ -97,6 +99,8 @@ if(FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT){
     PlayerEntity player = client.player;  
 }
 ```
+
+&nbsp;
 
 ## External Resources
 [LWJGL Keycodes](https://legacy.lwjgl.org/javadoc/org/lwjgl/input/Keyboard.html#field_summary)  
