@@ -12,8 +12,8 @@ TODO:
 - [ ] [Adding a Block](Adding%20a%20Block.md)
 - [ ] [Adding Achievements](Adding%20Achievements.md)
 - [ ] [Adding Features](Adding%20Features.md)
-- [ ] [Adding Recipes](Adding%20Recipes.md)
-- [ ] Finish [Code Driven Recipes](Code%20Driven%20Recipes.md)
+- [x] [Adding Recipes](Adding%20Recipes.md)
+- [x] Finish [Code Driven Recipes](Code%20Driven%20Recipes.md)
 - [ ] Custom Dimensions
 - [ ] Block/Item Tags
 - [ ] Bonemeal API

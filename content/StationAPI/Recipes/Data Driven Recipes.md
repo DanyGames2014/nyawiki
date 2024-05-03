@@ -52,7 +52,7 @@ Let's break this example down:
 `result` - this is the output of the crafting recipe, its very similar to the item in key. You specify the item registry name under `item`, then you can also define the amount of the items crafted with `count` and the meta of the item using `damage`  
 
 And here is the result:  
-![](shaped_crafting_recipe.png)
+![](data_shaped_recipe.png)
 &nbsp;  
 ### Shapeless Crafting Recipe  
 A shapeless crafting recipe only requires you to specify a list of ingredients, let's look at an example recipe:  
@@ -90,7 +90,7 @@ Let's break this example down:
 `result` - this is the output of the crafting recipe, its very similar to the item in ingredients. You specify the item registry name under `item`, then you can also define the amount of the items crafted with `count` and the meta of the item using `damage`  
 
 And here is the result:  
-![](shapeless_crafting_recipe.png)
+![](data_shapeless_recipe.png)
 &nbsp;  
 ### Smelting Recipe  
 A smelting recipe is very similar to a shapeless recipe but it only requires a single ingredient, let's look at an example:  
@@ -117,7 +117,7 @@ Let's break this example down:
 `result` - this is the output of the recipe, its very similar to the item in ingredient. You specify the item registry name under `item`, then you can also define the amount of the items made with `count` and the meta of the item using `damage`  
 
 And here is the result:  
-![](smelting_recipe.png)
+![](data_smelting_recipe.png)
 &nbsp;  
 
 ### External Resources:
