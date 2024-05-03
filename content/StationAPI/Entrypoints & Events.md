@@ -66,5 +66,5 @@ When the entrypoints are discovered, fields annotated like this will be set to t
 
 ### External Resources
 [StationAPI Wiki/Entrypoints](https://github.com/ModificationStation/StationAPI/wiki/Entrypoints) - The official StationAPI documentation on Entrypoints, Events and Utility Fields  
-[StationAPI Wiki/Init Event Order](https://github.com/ModificationStation/StationAPI/wiki/Init-order) - Documents the order in which events are called during game startup
+[StationAPI Wiki/Init Event Order](https://github.com/ModificationStation/StationAPI/wiki/Init-order) - Documents the order in which events are called during game startup  
 [Fabric Wiki/Entrypoints](https://fabricmc.net/wiki/documentation:entrypoint) - This is mostly useful for when you want to read up on the subject as there are some differences between StAPI and Fabric entrypoints
