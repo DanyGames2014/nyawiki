@@ -4,8 +4,11 @@ This is a public TODO List of things im planning to do, feel free to suggest stu
 - [ ] [Adding a Block](Adding%20a%20Block.md)
 - [ ] [Adding Features](Adding%20Features.md) + FeatureAPI (I need to find a way to do this without paulevs skinning me alive for my war crimes of worldgen code)
 - [ ] Getting Started (Need to talk with calm about a template mod to make it slightly easier)
-- [ ] Adding a Keybind (Should this have a docs page even?)
+- [ ] [Fabric Loader](Fabric%20Loader.md)
+- [x] Adding a Keybind (Should this have a docs page even?)
 - [ ] Custom Item Tooltips (No idea where to put this, maybe create an Item directory so it would be Item/Custom Tooltips as a sort of mini tutorial)
+- [x] [Adding Recipes](Adding%20Recipes.md)
+- [x] Finish [Code Driven Recipes](Code%20Driven%20Recipes.md)
 
 #### Medium Priority
 - [ ] Adding Achievements
@@ -29,7 +32,3 @@ This is a public TODO List of things im planning to do, feel free to suggest stu
 - [ ] Advanced Block Models (Mostly just point to Blockbench, noone sane enoguh does them manually)
 - [ ] NBT (What would i explain here)
 
-
-#### Done
-- [x] [Adding Recipes](Adding%20Recipes.md)
-- [x] Finish [Code Driven Recipes](Code%20Driven%20Recipes.md)
