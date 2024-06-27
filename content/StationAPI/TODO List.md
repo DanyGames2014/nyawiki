@@ -1,7 +1,7 @@
 This is a public TODO List of things im planning to do, feel free to suggest stuff to me on Discord (@DanyGames2014)
 
 #### High Priority
-- [ ] [Adding a Block](Adding%20a%20Block.md)
+- [x] [Adding a Block](Adding%20a%20Block.md)
 - [ ] [Adding Features](Adding%20Features.md) + FeatureAPI (I need to find a way to do this without paulevs skinning me alive for my war crimes of worldgen code)
 - [ ] Getting Started (Need to talk with calm about a template mod to make it slightly easier)
 - [ ] [Fabric Loader](Fabric%20Loader.md)
