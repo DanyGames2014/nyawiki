@@ -78,7 +78,7 @@ There are 2 ways to texture an item, using the data driven StationAPI [Item Mode
 I would recommend sticking with the Item Models as theyre more flexible.
 
 #### 4.1 StationAPI Item Models
-The usage of item models is described in detail in [Item Model](Item%20Model.md) so we will only briefly go over it. For items all you need is an item model file placed at `resources/assets/<modid>/stationapi/models/item/<item_name>.json`, so for our example item that will be located at `resourced/assets/examplemod/stationapi/models/item/example_item.json`, and in this file we will specify our texture on the default layer0. 
+The usage of item models is described in detail in [Item Model](Item%20Model.md) so we will only briefly go over it. For items all you need is an item model file placed at `resources/assets/<modid>/stationapi/models/item/<item_name>.json`, so for our example item that will be located at `resources/assets/examplemod/stationapi/models/item/example_item.json`, and in this file we will specify our texture on the default layer0. 
 
 ```json
 {  
