@@ -1,5 +1,0 @@
----
-title: Mixins
----
-
-Hi

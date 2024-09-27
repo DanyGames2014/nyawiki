@@ -21,7 +21,6 @@ When writing the language file you can use the `@` placeholder instead of having
 | Achievement Name        | achievement.\<namespace>.<registry_name>                    |
 | Achievement Description | achievement.\<namespace>.<registry_name>.desc               |
 | Keybind Name            | key.\<namespace>.<registry_name>                            |
->[!info] Keys added by StationAPI are namespaced more than once
 
 #### [[BH Creative]]
 
