@@ -126,8 +126,6 @@ IntelliJ will complain that we need to create a matching super constructor, so w
 
 Now we can access the methods and fields from the class our targets inherits from and our resulting class with the implemented logic will look like this
 
-![](playerentity_mixin_example.png)  
-
 ```java
 @Mixin(PlayerEntity.class)  
 public class PlayerEntityMixin extends LivingEntity {  

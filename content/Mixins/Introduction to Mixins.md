@@ -5,4 +5,4 @@ Mixins are a way of modifying the base game code in the Fabric modding landscape
 - Actually legal distribution - since we are no longer shipping a modified vanilla class, only a set of patches for it, we are no longer breaking Mojang's copyright and can distribute our mod on platforms like Modrinth  
 - Improved user experience - the user doesn't have to think if they have to put the mod in jar or in mods folder, with Fabric, everything goes into the mods folder, including mixins which are packaged inside of the mod jar  
 
-
+To start with Creating Mixins, head over to [Creating a Mixin](Creating%20a%20Mixin.md)
