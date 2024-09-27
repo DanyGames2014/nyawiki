@@ -5,8 +5,12 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
+  afterBody: [],
   footer: Component.Footer({
     links: {
+      GitHub: "https://github.com/DanyGames2014/NyaWiki",
+      "Example Mod": "https://github.com/DanyGames2014/nyawiki-example-mod",
+      "Discord Community": "",
     },
   }),
 }
