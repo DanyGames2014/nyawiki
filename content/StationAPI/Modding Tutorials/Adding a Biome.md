@@ -119,8 +119,8 @@ And these are our resulting biomes
 ![](test_biome_1.png)
 ![](test_biome_2.png)
 
-The entire code for both Biomes and Biome Providers is the following:
-
+&nbsp;  
+The entire code for both Biomes and Biome Providers:
 [src/main/java/net/danygames2014/examplemod/event/BiomeListener.java](https://github.com/DanyGames2014/nyawiki-example-mod/blob/master/src/main/java/net/danygames2014/examplemod/event/BiomeListener.java)
 ```java
 public class BiomeListener {  
