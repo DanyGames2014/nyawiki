@@ -53,9 +53,6 @@ biomeBuilder.grassColor(0x00EAFF);
 testBiome1 = biomeBuilder.build();
 ```
 
-And this is how the resulting `Test Biome 1` looks like  
-![](test_biome_1.png)  
-
 &nbsp;  
 
 There are many more things you can call on the Biome Builder to customize your biomes
@@ -81,12 +78,98 @@ There are many more things you can call on the Biome Builder to customize your b
 ## Creating a Biome Provider
 To have your biomes appear in game, you have to add them to a Biome Provider and register that provider to the dimension you want to add the biomes to.  
 
-There are 2 types of biomes providers: Climate and Voronoi.   
-Climate provider generates a temperature and humidity Perlin Noise map, and you assign your biomes according to those values.
-![](biome_perlin_noise.png)
+There are 2 types of biomes providers:  
+**Voronoi Provider (left)** - creates a Voronoi diagram where to each of the cell a biome will be assigned.  
+**Climate Provider (right)** -  generates a temperature and humidity Perlin Noise map, and you assign your biomes according to those values.  
 
-Voronoi creates a Voronoi diagram where to each of the cell a biome will be assigned.
-![](biome_voronoi_diagram.png)
+![](biome_perlin_and_voronoi.png)  
+
+> [!note] With Voronoi Provider, the temperature and humidity noise still exists, so it might be snowy in your biome  
+
+Let's create a biome provider and add our Biomes to it.
+[src/main/java/net/danygames2014/examplemod/event/BiomeListener.java](https://github.com/DanyGames2014/nyawiki-example-mod/blob/master/src/main/java/net/danygames2014/examplemod/event/BiomeListener.java)
+```java
+public class BiomeListener {       
+    // Variables holding our biome providers  
+    public static ClimateBiomeProvider climateBiomeProvider;  
+    public static VoronoiBiomeProvider voronoiBiomeProvider;  
+      
+    @EventListener  
+    public void registerBiomeProvider(BiomeProviderRegisterEvent event){  
+        // Initialize the biome provider  
+        climateBiomeProvider = new ClimateBiomeProvider();  
+        // Add a biome in the temperature range of 0.7 - 1.0 and humidity of 0.4 - 1.0  
+        climateBiomeProvider.addBiome(testBiome1, 1.0F, 0.7F, 1.0F, 0.4F);  
+        // Add the biome provider to the overworld  
+        BiomeAPI.addOverworldBiomeProvider(ExampleMod.NAMESPACE.id("climate_biome_provider"), climateBiomeProvider);  
+          
+        // Initialize the biome provider  
+        voronoiBiomeProvider = new VoronoiBiomeProvider();  
+        // Add a new biome to the provider  
+        voronoiBiomeProvider.addBiome(testBiome2);  
+        // Add the biome provider to the nether  
+        BiomeAPI.addNetherBiomeProvider(ExampleMod.NAMESPACE.id("voronoi_biome_provider"), voronoiBiomeProvider);  
+    }  
+}
+```
+
+You can see that we have initialized the biome provider, added a biome to it and then called the BiomeAPI to add that provider to the respective dimension.
+
+And these are our resulting biomes
+![](test_biome_1.png)
+![](test_biome_2.png)
+
+The entire code for both Biomes and Biome Providers is the following:
+
+[src/main/java/net/danygames2014/examplemod/event/BiomeListener.java](https://github.com/DanyGames2014/nyawiki-example-mod/blob/master/src/main/java/net/danygames2014/examplemod/event/BiomeListener.java)
+```java
+public class BiomeListener {  
+    // Variables holding our biomes  
+    public static Biome testBiome1;  
+    public static Biome testBiome2;  
+      
+    // Variables holding our biome providers  
+    public static ClimateBiomeProvider climateBiomeProvider;  
+    public static VoronoiBiomeProvider voronoiBiomeProvider;  
+      
+    @EventListener  
+    public void registerBiomes(BiomeRegisterEvent event){  
+        // A local biomebuilder instance that can be reused between biomes  
+        BiomeBuilder biomeBuilder;  
+          
+        // Building Test Biome 1  
+        biomeBuilder = BiomeBuilder.start("Test Biome 1");  
+        biomeBuilder.fogColor(0xFF5CF4);  
+        biomeBuilder.leavesColor(0x00EAFF);  
+        biomeBuilder.grassColor(0x00EAFF);  
+        testBiome1 = biomeBuilder.build();  
+  
+        // Building Test Biome 2  
+        biomeBuilder = BiomeBuilder.start("Test Biome 2");  
+        biomeBuilder.fogColor(0x00EAFF);  
+        biomeBuilder.leavesColor(0xFF5CF4);  
+        biomeBuilder.grassColor(0xFF5CF4);  
+        biomeBuilder.surfaceRule(SurfaceBuilder.start(Block.GLOWSTONE).ground(1).replace(Block.NETHERRACK).build());  
+        testBiome2 = biomeBuilder.build();  
+    }  
+      
+    @EventListener  
+    public void registerBiomeProvider(BiomeProviderRegisterEvent event){  
+        // Initialize the biome provider  
+        climateBiomeProvider = new ClimateBiomeProvider();  
+        // Add a biome in the temperature range of 0.7 - 1.0 and humidity of 0.4 - 1.0  
+        climateBiomeProvider.addBiome(testBiome1, 1.0F, 0.7F, 1.0F, 0.4F);  
+        // Add the biome provider to the overworld  
+        BiomeAPI.addOverworldBiomeProvider(ExampleMod.NAMESPACE.id("climate_biome_provider"), climateBiomeProvider);  
+          
+        // Initialize the biome provider  
+        voronoiBiomeProvider = new VoronoiBiomeProvider();  
+        // Add a new biome to the provider  
+        voronoiBiomeProvider.addBiome(testBiome2);  
+        // Add the biome provider to the nether  
+        BiomeAPI.addNetherBiomeProvider(ExampleMod.NAMESPACE.id("voronoi_biome_provider"), voronoiBiomeProvider);  
+    }
+```
 
 ## External Resources
 StationAPI Test Mod [Biome & Biome Provider](https://github.com/ModificationStation/StationAPI/blob/master/src/test/java/net/modificationstation/sltest/worldgen/TestWorldgenListener.java)  
