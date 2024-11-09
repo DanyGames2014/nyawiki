@@ -10,7 +10,7 @@ modImplementation("net.danygames2014:UniWrench:${project.uniwrench_version}") {
 
 `gradle.properties`
 ```properties
-uniwrench_version=2.1.0
+uniwrench_version=2.3.0
 ```
 
 > [!note] Make sure to check the repository to see if the mod hasn't updated
