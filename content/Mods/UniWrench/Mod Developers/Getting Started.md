@@ -18,5 +18,5 @@ uniwrench_version=2.1.0
 ## Using UniWrench
 You can use UniWrench in multiple ways:
 * [Making blocks Wrenchable](Making%20blocks%20Wrenchable.md)
-* [Making your own Wrench Modes](Making%20your%20own%20Wrench%20Modes.md)
-* [Making your own Wrench](Making%20your%20own%20Wrench.md)
+* [Creating your own Wrench Mode](Creating%20your%20own%20Wrench%20Mode.md)
+* [Creating a custom Wrench](Creating%20a%20custom%20Wrench.md)
