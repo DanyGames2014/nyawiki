@@ -50,7 +50,7 @@ Now to actually register the Block we need to instantiate it in the `BlockRegist
 public class ExampleMod {  
 	// Namespace Utility Field
     @Entrypoint.Namespace  
-    public static final Namespace NAMESPACE = Null.get(); 
+    public static Namespace NAMESPACE;
   
     // A static object holding our bock 
     public static Block exampleBlock;  
@@ -134,7 +134,7 @@ To add the texture to the atlas you need to get the terrain atlas and then call 
 ```java
 public class TextureListener {  
     @Entrypoint.Namespace  
-    public static final Namespace NAMESPACE = Null.get();  
+    public static Namespace NAMESPACE;
 
 	// A static int that will hold the texture id so we can later reference it from the block itself
     public static int exampleBlockTexture;  

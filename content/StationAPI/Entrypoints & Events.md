@@ -45,22 +45,18 @@ Utility Fields are mostly used to have an easy access to your mods namespace and
 ```java
 public class ExampleMod {
 	@Entrypoint.Namespace  
-	public static final Namespace NAMESPACE = Null.get();  
+	public static Namespace NAMESPACE;
   
 	@Entrypoint.Logger  
-	public static final Logger LOGGER = Null.get();
-
-	@Entrypoint.Instance
-	public static final ExampleMod INSTANCE = Null.get();
+	public static Logger LOGGER;
 }
 ```
 
 When the entrypoints are discovered, fields annotated like this will be set to their values :  
+
 `@Entrypoint.Namespace` - This will be set to the Namespace that was specified in the `fabric.mod.json`, this is mostly used to get registry names with your namespace by calling for example `NAMESPACE.id("example_block")`
 
 `@Entrypoint.Logger` - This will be set to a Logger with your namespace as the logger name, this is to make it easier to distinguish which mod logged each message  
-
-`@Entrypoint.Instance` - This will be sed to the entrypoint's class instance
 
 >[!info] The `Null.get()` isn't necessary, you can just leave the fields uninitialized, but IntelliJ will scream that the fields will produce a NullPointerException because it doesn't know that they will be later set with reflection. It is is only there to make IntelliJ believe that everything is fine and it doesn't have to raise a warning.
 

@@ -36,7 +36,7 @@ Now we will want to instantiate our Item in the `ItemRegistryEvent`. We will cre
 public class ExampleMod {
 	// Namespace Utility Field
 	@Entrypoint.Namespace  
-	public static final Namespace NAMESPACE = Null.get();
+	public static Namespace NAMESPACE;
 
 	// A static object holding our item
 	public static Item exampleItem;
@@ -99,7 +99,7 @@ To set a texture using this event you need to call the `setTexture` method on th
 ```java
 public class TextureListener {
     @Entrypoint.Namespace
-    public static final Namespace NAMESPACE = Null.get();
+    public static Namespace NAMESPACE;
 
     @EventListener
     public void registerTextures(TextureRegisterEvent event) {
