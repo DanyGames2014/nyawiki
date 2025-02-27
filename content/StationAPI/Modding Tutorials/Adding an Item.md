@@ -50,6 +50,8 @@ public class ExampleMod {
 }
 ```
 
+> [!note] You can directly just instantiate a `new TemplateItem` if you are not planning on overriding any methods in your `Item` class. This can greatly reduce the amount of class clutter in your workspace.
+
 Now when the game starts up the Event Listener will get triggered when the  `ItemRegistryEvent` gets fired and our item will be instantiated.  
 ### 3. Localizing the Item
 Notice the `setTranslationKey` method, you can use multiple ways to set the translation key:  
