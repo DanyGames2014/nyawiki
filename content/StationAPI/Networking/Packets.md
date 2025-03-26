@@ -1,0 +1,3 @@
+Packets are a tool for communicating between the client and server. They can be client-bound, (the packet is only sent from the server to client), server-bound (the packet is only sent from client to server) or bi-directional. They can carry any arbitrary data that you can fit into its Data Stream.   
+
+StationAPI also provides a `MessagePacket`, which despite its name can also be used for any arbitrary data, including serialized objects.
