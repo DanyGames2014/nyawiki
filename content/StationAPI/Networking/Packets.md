@@ -49,11 +49,31 @@ public @NotNull PacketType<ExamplePacket> getType() {
 
 &nbsp;  
 &nbsp;  
+## Registering the Packet  
+Now we need to register the packet, to do this, we will create a new event listener that will listen to the `PacketRegisterEvent` and register the class as an entrypoint, to learn more about how to do that, head to [Entrypoints & Events](Entrypoints%20&%20Events.md).  
 
+```java
+public class PacketListener {  
+    @Entrypoint.Namespace  
+    public static Namespace NAMESPACE;  
+  
+    @EventListener  
+    public void registerPackets(PacketRegisterEvent event) {  
+        Registry.register(PacketTypeRegistry.INSTANCE, NAMESPACE.id("example"), ExamplePacket.TYPE);  
+    }  
+}
+```
+
+>[!note] The `Registry.register` is unfortunately required for now, in future you will be able to use event.register as with every other event
+
+The first parameter will always be `PacketTypeRegistry.INSTANCE`, this is what tells the `Registry.register` method into which registry we are registering.  
+
+The second parameter will be the Identifier of your packet, this can be anything you like.  
+
+The third parameter is the type of the packet, you need to return the `public static final PacketType` that you've created in the packet class previously
 
 ## Adding data to the Packet
 Now that we have the basic packet structure and we have defined the `PacketType`, we can start adding data to it. We will do this by adding fields to the class with the values we wanna transfer. Here is a table of types you can use and their sizes (This will be relevant later).
-
 
 | Data Type | Size          |
 | --------- | ------------- |
@@ -66,3 +86,4 @@ Now that we have the basic packet structure and we have defined the `PacketType`
 | float     | 4 bytes       |
 | double    | 8 bytes       |
 | String    | String.length |
+
