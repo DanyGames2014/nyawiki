@@ -282,18 +282,18 @@ We can now verify that the packet is acting like we want it to.
 
 ### Singleplayer  
 Client Game Window:  
-![[singleplayer_game_window.png]]
+![[singleplayer_game_window.png]]  
 
 Client Console:  
-![[singleplayer_client_console.png]]
+![[singleplayer_client_console.png]]  
 &nbsp;
 We can see that the player receives a message from the Client about the block being removed, and the String that we sent with the packet is displayed in the Client Console.
 
 ### Multiplayer  
 Client Game Window:  
-![[multiplayer_game_window.png]]
+![[multiplayer_game_window.png]]  
 
 Server Console:  
-![[multiplayer_server_console.png]]
+![[multiplayer_server_console.png]]  
 &nbsp;
 We can see that the player receives a message from the Server about the block being removed, and this time the String that we sent is displayed in the Server Console.
