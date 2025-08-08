@@ -1,0 +1,24 @@
+{
+	"nodes":[
+		{"id":"ca49a303fa21b6b0","type":"group","x":-560,"y":-100,"width":880,"height":140,"color":"5","label":"Singleplayer"},
+		{"id":"215c4e1e5479eeaa","type":"group","x":-560,"y":180,"width":880,"height":140,"color":"4","label":"Multiplayer"},
+		{"id":"cdb456551ee6e40e","x":-540,"y":-60,"width":180,"height":60,"type":"text","text":"Packet.apply"},
+		{"id":"631e3e8e4bc865c0","type":"text","text":"Network Layer","x":-540,"y":220,"width":180,"height":60},
+		{"id":"57805230e4bed342","x":-320,"y":220,"width":180,"height":60,"type":"text","text":"Server"},
+		{"id":"177eee19094ab45c","x":-100,"y":220,"width":180,"height":60,"type":"text","text":"Packet.apply"},
+		{"id":"7a71bdeb30f6600e","x":120,"y":220,"width":180,"height":60,"type":"text","text":"Network Layer"},
+		{"id":"ff9d165d5b7d4be0","x":360,"y":-60,"width":180,"height":60,"type":"text","text":"Client"},
+		{"id":"3dff6fd59ed21ccb","type":"text","text":"PacketHelper","x":-940,"y":80,"width":180,"height":60},
+		{"id":"b70eb8451538bfbe","type":"text","text":"Your Code","x":-1260,"y":80,"width":180,"height":60}
+	],
+	"edges":[
+		{"id":"ff807013fbb258e2","fromNode":"b70eb8451538bfbe","fromSide":"right","toNode":"3dff6fd59ed21ccb","toSide":"left","label":"Packet"},
+		{"id":"d51d8713cf0ef747","fromNode":"631e3e8e4bc865c0","fromSide":"right","toNode":"57805230e4bed342","toSide":"left"},
+		{"id":"3f0b7b91672c8555","fromNode":"57805230e4bed342","fromSide":"right","toNode":"177eee19094ab45c","toSide":"left"},
+		{"id":"d6219863d3b46da9","fromNode":"3dff6fd59ed21ccb","fromSide":"right","toNode":"cdb456551ee6e40e","toSide":"left","label":"Short-Circuit \nto Client"},
+		{"id":"c1c6236c49c4e168","fromNode":"177eee19094ab45c","fromSide":"right","toNode":"7a71bdeb30f6600e","toSide":"left"},
+		{"id":"cd6d264f2d763869","fromNode":"7a71bdeb30f6600e","fromSide":"right","toNode":"ff9d165d5b7d4be0","toSide":"bottom","label":"Update for client\n(Response)"},
+		{"id":"a4bfb21341176bbf","fromNode":"cdb456551ee6e40e","fromSide":"right","toNode":"ff9d165d5b7d4be0","toSide":"left"},
+		{"id":"c5f6f392279f90bc","fromNode":"3dff6fd59ed21ccb","fromSide":"right","toNode":"631e3e8e4bc865c0","toSide":"left","label":"Send \nto Server"}
+	]
+}

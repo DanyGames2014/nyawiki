@@ -13,9 +13,7 @@ public class ExamplePacket extends Packet implements ManagedPacket<ExamplePacket
 
 IntelliJ will now prompt you to implement the `Packet` methods and the `ManagedPacket` method.   
 ![](intellij_implement_methods.png)  
-In this context menu, click on `Implement Methods`
-&nbsp;
-&nbsp;
+In this context menu, click on `Implement Methods`  
 ![](intellij_implement_methods2.png)   
 Make sure all methods are selected and hit OK. This will result in the methods getting implemented with some default implementation.  
 
@@ -72,18 +70,30 @@ The second parameter will be the Identifier of your packet, this can be anything
 
 The third parameter is the type of the packet, you need to return the `public static final PacketType` that you've created in the packet class previously
 
+## Packet short-circuiting
+Before we actually add data to the packet, let's talk about packet short-circuiting, this allows you to greatly simplify your logic as you can handle the packet in singleplayer and multiplayer in a same way.   
+This is done by allowing you to send the packet in singleplayer, but instead of sending it to a server, it gets directly sent to the packet handler on the client and calling the `apply` method.  
+
+On the below picture you can see a rough visualization of the different paths that the packet will take in either singleplayer or multiplayer.  
+![](packet_path.png)
+* In the case of multiplayer, the packet gets sent thru the network layer to the server, the packet is then processed on the server in the `Packet.apply` method. The server will then determine if the client needs to be updated on what happened on the server, for example if a block has been changed, and if yes, send the appropriate update packets to the client which will process them.  
+
+* In the case of singleplayer, the packet gets immediately sent into the `Packet.apply` method. No further updates are necessary since everything is happening on the client.  
+
+
 ## Adding data to the Packet
-Now that we have the basic packet structure and we have defined the `PacketType`, we can start adding data to it. We will do this by adding fields to the class with the values we wanna transfer. Here is a table of types you can use and their sizes (This will be relevant later).
+Now that we created our packet and registered it, we can start adding data to it. We will do this by adding fields to the class with the values we wanna transfer. However keep in mind that we need to keep track of how large our packet is, below is a table of how many bytes each of the common data types will use up.  
 
-| Data Type | Size          |
-| --------- | ------------- |
-| boolean   | 1 byte        |
-| char      | 2 bytes       |
-| byte      | 1 byte        |
-| short     | 2 bytes       |
-| int       | 4 bytes       |
-| long      | 8 bytes       |
-| float     | 4 bytes       |
-| double    | 8 bytes       |
-| String    | String.length |
+| Data Type | Size          | Write Method        | Read Method        |
+| --------- | ------------- | ------------------- | ------------------ |
+| boolean   | 1 byte        | stream.writeBoolean | stream.readBoolean |
+| char      | 2 bytes       | stream.writeChar    | stream.readChat    |
+| byte      | 1 byte        | stream.writeByte    | stream.readByte    |
+| short     | 2 bytes       | stream.writeShort   | stream.readShort   |
+| int       | 4 bytes       | stream.writeInt     | stream.readInt     |
+| long      | 8 bytes       | stream.writeLong    | stream.readLong    |
+| float     | 4 bytes       | stream.writeFloat   | stream.readFloat   |
+| double    | 8 bytes       | stream.writeDouble  | stream.readDouble  |
+| String    | String.length | stream.writeUTF     | stream.readUTF     |
 
+# **Work In Progress ^.^**
