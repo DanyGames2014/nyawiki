@@ -203,7 +203,7 @@ public class ExamplePacket extends Packet implements ManagedPacket<ExamplePacket
 
 >[!warning] You need to make sure that the write and read methods are symmetrical = the values are being read in the same order as they have been written  
 
-### Applying the packet
+## Applying the packet
 Now we will tackle actually processing the packet, we will need to account for both cases that can happen (the packet being received on server & the packet being short-circuit on the client).  
 
 (Some of the parts of the packet class will be omitted for more clarity during this section)  
@@ -251,7 +251,7 @@ Since the `apply` method gets ran on both sides, we cannot reference any side sp
 
 In both of the methods we use `PlayerHelper.getPlayerFromPacketHandler` because the `player` fields in the network handler are private, this method will obtain the fields using Accessors and return them back to us, from the `PlayerEntity` we can then get the `world`  field.  
 
-### Sending the packet
+## Sending the packet
 Now that we have a way to handle the packet, we just need to send it from the client. I have chosen to do this in the `ExampleItem` by overriding the `Item.useOnBlock` method and if the player is sneaking, the packet will get sent.  
 ```java
 public class ExampleItem extends TemplateItem {  
