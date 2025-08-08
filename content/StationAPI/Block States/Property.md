@@ -1,4 +1,4 @@
-Properties are per-block values stored in the [Block State](Block%20State.md) of each block. Properties can be of various types and are mostly used to change block apperance or store simple state to avoid having to use Block Entities.  
+Properties are per-block values stored in the [Block State](Block%20State.md) of each block. Properties can be of various types and are mostly used to change block appearance or store simple state to avoid having to use Block Entities.  
 
 To use Properties we create a `public static final` field in our Block class of the type of the property we want to use, let's use a boolean property for now, but the principles apply to all property types.  
 
@@ -57,13 +57,12 @@ Let's use this to make the block angry if the player is crouching while placing 
 ```java
 @Override  
 public BlockState getPlacementState(ItemPlacementContext context) {  
-    if(context.getPlayer().method_1373()){  
+    if(context.getPlayer().isSneaking()){  
         return getDefaultState().with(ANGRY, true);      
     }  
     return getDefaultState().with(ANGRY, false);  
 }
 ```
-(the `Entity.method_1373()` isn't mapped at the time of writing, but it means `isCrouching`)  
 
 Now when we open up the game and place the block down it won't be angry, but if we crouch and place it, it will be angry.
 
@@ -91,9 +90,9 @@ public class AngryBlockDetector extends TemplateItem {
             
             // Now we send a chat message to the player that tells them if the block is angry or not
             if(isAngry){  
-                player.method_490("The Block do be angry");  
+                player.sendMessage("The Block do be angry");  
             }else {  
-                player.method_490("This block is chill");  
+                player.sendMessage("This block is chill");  
             }  
             return true;  
         }  
@@ -101,7 +100,7 @@ public class AngryBlockDetector extends TemplateItem {
     }  
 }
 ```
-(the `EntityPlayer.method_490()` isn't mapped at the time of writing, but it means `sendMessage`)   
+ 
 
 >[!warning] If you try to access a property which is not present on the block, the game will crash  
 
