@@ -58,8 +58,6 @@ When the entrypoints are discovered, fields annotated like this will be set to t
 
 `@Entrypoint.Logger` - This will be set to a Logger with your namespace as the logger name, this is to make it easier to distinguish which mod logged each message  
 
->[!info] The `Null.get()` isn't necessary, you can just leave the fields uninitialized, but IntelliJ will scream that the fields will produce a NullPointerException because it doesn't know that they will be later set with reflection. It is is only there to make IntelliJ believe that everything is fine and it doesn't have to raise a warning.
-
 ### External Resources
 [StationAPI Wiki/Entrypoints](https://github.com/ModificationStation/StationAPI/wiki/Entrypoints) - The official StationAPI documentation on Entrypoints, Events and Utility Fields  
 [StationAPI Wiki/Init Event Order](https://github.com/ModificationStation/StationAPI/wiki/Init-order) - Documents the order in which events are called during game startup  

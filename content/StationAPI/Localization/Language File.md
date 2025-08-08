@@ -1,5 +1,3 @@
->[!warning] This page applies to a recent commit of StationAPI which will be part of StationAPI Alpha 2
-
 Language File (mostly called "lang file") is a file usually fitted with the .lang extension which stores translation strings for items, blocks, dimensions etc.
 It follows a pretty simple format of one translation per line in the following format `Translation Key=Localized Name`  
 ## Translation Key
