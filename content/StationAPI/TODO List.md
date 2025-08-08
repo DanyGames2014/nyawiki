@@ -3,6 +3,7 @@ This is a public TODO List of things im planning to do, feel free to suggest stu
 - [x] [Adding a Block](Adding%20a%20Block.md)
 - [ ] [Adding Features](Adding%20Features.md) + FeatureAPI (I need to find a way to do this without paulevs skinning me alive for my war crimes of worldgen code)
 - [ ] Getting Started
+- [ ] Access Widener
 - [ ] [Fabric Loader](Fabric%20Loader.md)
 - [x] Adding a Keybind (Should this have a docs page even?)
 - [ ] Custom Item Tooltips (No idea where to put this, maybe create an Item directory so it would be Item/Custom Tooltips as a sort of mini tutorial)
