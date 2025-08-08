@@ -286,7 +286,7 @@ Client Game Window:
 
 Client Console:  
 ![[singleplayer_client_console.png]]  
-&nbsp;
+&nbsp;  
 We can see that the player receives a message from the Client about the block being removed, and the String that we sent with the packet is displayed in the Client Console.
 
 ### Multiplayer  
@@ -295,5 +295,5 @@ Client Game Window:
 
 Server Console:  
 ![[multiplayer_server_console.png]]  
-&nbsp;
+&nbsp;  
 We can see that the player receives a message from the Server about the block being removed, and this time the String that we sent is displayed in the Server Console.
