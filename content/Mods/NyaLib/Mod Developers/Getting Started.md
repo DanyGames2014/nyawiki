@@ -2,9 +2,7 @@ To use NyaLib in your project, add the library into your dependencies in your `b
 
 `build.gradle`
 ```groovy
-modImplementation("net.danygames2014:NyaLib:${project.nyalib_version}") {
-	transitive false 
-}
+modImplementation("net.danygames2014:NyaLib:${project.nyalib_version}")
 ```
 
 
