@@ -10,7 +10,7 @@ modImplementation("net.danygames2014:NyaLib:${project.nyalib_version}") {
 
 `gradle.properties`
 ```properties
-nyalib_version=0.13.0
+nyalib_version=0.17.0
 ```
 
 > [!note] Make sure to check the maven repository to see if the mod hasn't updated
