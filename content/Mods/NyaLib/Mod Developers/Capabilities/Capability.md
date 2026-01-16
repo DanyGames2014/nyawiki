@@ -25,5 +25,5 @@ A capability implementation is where the methods of the capability class get con
 A capability implementation extends the capability class it is implementing and contains the actual handling logic for the given target, working as an adapter between the capability definition and the Block/Item/Entity itself.
 
 **For further info on using and creating capabilities, please head to:**  
-[Using capabilities](Using%20capabilities.md)
+[Using capabilities](Using%20capabilities.md)  
 [Creating Capabilities](Creating%20Capabilities.md)
