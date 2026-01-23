@@ -5,13 +5,13 @@ Multiblocks are a shaped recipe and therefore need to be added as recipes into a
 ### Multiblock layers
 The first part of a multiblock recipe is its layers. Layers are two-dimensional and therefore need to be stacked on top of each other in order to form a three-dimensional shape. Each layer is put together using strings which represent linear slices of a layer. The order of the layers is **bottom to top**, so the first layer in the code is the lowest one and the last layer is the highest one. Each character in the string represents a different block which is specified in the next step. Blank spaces are used to indicate air blocks. The following example can be used to figure out the syntax of the layer code:
 ```java
-List<String[]> testMultiblockLayers = List.of(
+String[][] testMultiblockLayers = new String[][] {
     new String[]{"  xxx", "  xgx", "  xxx", "x---x", ".   .", ".   .", ".   .", "x---x"},
     new String[]{"  xyx", "  xxx", "  xxx", "i   i", "     ", "     ", "     ", "i   i"},
     new String[]{"  xxx", "  pxf", "  xxx", "i   i", "     ", "     ", "     ", "i   i"},
     new String[]{"     ", "     ", "     ", "i   i", "     ", "     ", "     ", "i   i"},
     new String[]{"     ", "     ", "     ", "x---x", ".   .", ".   .", ".   .", "x---x"}
-);
+}
 ```
 ### Block pattern entries
 Block pattern entries are objects containing all important information for a recipe to associate the characters in the layers with specific blocks and to determine the item shown in the block requirements list. The object requires 4 parameters:
@@ -54,12 +54,22 @@ The final step is to register all the previously created objects to add the mult
 ```java
 MultiBlockRecipeRegistry.INSTANCE.addMultiblockRecipe(1, 2, 3, 4);
 ```
-1. A String with the translation key used to determine the multiblock name. The translation key is specified in the lang file just like any other translation key.
+1. An identifier with the translation key used to determine the multiblock name. The translation key is specified in the lang file just like any other translation key.
 2. The object containing the description of the multiblock.
 3. The object containing the layers of the multiblock.
 4. The object containing the block patterns of the multiblock.
 An example from the test multiblock can be seen below:
 ```java
-MultiBlockRecipeRegistry.INSTANCE.addMultiblockRecipe("multiblock.multiblocktab.test", testDescription, testMultiblockLayers, testMultiblockPatterns);
+MultiBlockRecipeRegistry.INSTANCE.addMultiblockRecipe(Identifier.of(NAMESPACE, "test"), testDescription, testMultiblockLayers, testMultiblockPatterns);
 ```
+
+## Adding the translation key to the lang file
+Multiblock translation keys consist of three parts separated with a dot '.':
+- "multiblock" prefix which is always this exact word
+- Namespace of your mod
+- Name of the multiblock
+
+The translation key for the example would look like this:
+`multiblock.multiblocktab.test=Test Multiblock`
+
 The multiblock can then be found by looking for the recipe uses of any block in the recipe. Clicking through the recipe categories in the GUI should eventually lead to the multiblock.

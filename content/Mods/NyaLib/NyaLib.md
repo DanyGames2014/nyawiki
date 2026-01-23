@@ -1,4 +1,4 @@
-![[icon.png]]
+![[Mods/NyaLib/attachments/icon.png]]
 
 | Author       | DanyGames2014                                  |
 | ------------ | ---------------------------------------------- |
