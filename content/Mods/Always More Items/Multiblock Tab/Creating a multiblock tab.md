@@ -3,7 +3,7 @@ This page shows the step-by-step creation process using an example from the test
 Multiblocks are a shaped recipe and therefore need to be added as recipes into a RecipeListener. How a RecipeListener works and how it can be created is explained [here](Code%20Driven%20Recipes.md).
 ## Creating the recipe itself
 ### Multiblock layers
-The first part of a multiblock recipe is its layers. Layers are two-dimensional and therefore need to be stacked on top of each other in order to form a three-dimensional shape. Each layer is put together using strings which represent linear slices of a layer. The order of the layers is **bottom to top**, so the first layer in the code is the lowest one and the last layer is the highest one. Each character in the string represents a different block which is specified in the next step. Blank spaces are used to indicate air blocks. The following example can be used to figure out the syntax of the layer code:
+The first part of a multiblock recipe is its layers. It functions similarly to the layout of a shaped recipe. Layers are two-dimensional and therefore need to be stacked on top of each other in order to form a three-dimensional shape. Each layer is put together using strings which represent linear slices of a layer. The order of the layers is **bottom to top**, so the first layer in the code is the lowest one and the last layer is the highest one. Each character in the string represents a different block which is specified in the next step. Blank spaces are used to indicate air blocks. The following example can be used to figure out the syntax of the layer code:
 ```java
 String[][] testMultiblockLayers = new String[][] {
     new String[]{"  xxx", "  xgx", "  xxx", "x---x", ".   .", ".   .", ".   .", "x---x"},
@@ -16,7 +16,7 @@ String[][] testMultiblockLayers = new String[][] {
 ### Block pattern entries
 Block pattern entries are objects containing all important information for a recipe to associate the characters in the layers with specific blocks and to determine the item shown in the block requirements list. The object requires 4 parameters:
 ```java
-new BlockPatternEntry(1, 2, 3, 4);
+new BlockPatternEntry(key, defaultState, meta, requirement);
 ```
 1. Character to be associated with the block, written with Java character syntax where 'c' is a valid example of character syntax.
 2. A BlockState, in this case the default state of the block used in the recipe, such as `Block.LOG.getDefaultState()`.
@@ -52,7 +52,7 @@ The inner pair of squiggly brackets **must** be added to prevent the Java compil
 ### Registering the multiblock
 The final step is to register all the previously created objects to add the multiblock into the game. The registry is done using a single line of code with the following parameters:
 ```java
-MultiBlockRecipeRegistry.INSTANCE.addMultiblockRecipe(1, 2, 3, 4);
+MultiBlockRecipeRegistry.INSTANCE.addMultiblockRecipe(identifier, description, layers, blockPatterns);
 ```
 1. An identifier with the translation key used to determine the multiblock name. The translation key is specified in the lang file just like any other translation key.
 2. The object containing the description of the multiblock.
