@@ -61,8 +61,8 @@ UniWrench allows for the creation of custom wrenches which can be used interchan
 Wrench modes, wrenches themselves and the wrenched blocks can all trigger an action when a block is wrenched, this follows the order of:  
 * `Wrenchable` interface  
 * Actions registered in the `WrenchableBlockRegistry`  
-* Wrench action  
-* Wrench Mode action  
+* Wrench Action  
+* Wrench Mode Action  
 
 Wrenches can also be locked from having their wrench mode switched and can have a delay between each wrenching action. While it has a wrench in the name it could also be used for other things such as magic wands etc.  
 
