@@ -19,16 +19,10 @@ When writing the language file you can use the `@` placeholder instead of having
 | Achievement Name        | achievement.\<namespace>.<registry_name>                    |
 | Achievement Description | achievement.\<namespace>.<registry_name>.desc               |
 | Keybind Name            | key.\<namespace>.<registry_name>                            |
+| Entity                  | entity.\<namespace>.<registry_name>.name                     |
 
 #### [[BH Creative]]
 
 | Object Type       | Translation Key Format                |
 | ----------------- | ------------------------------------- |
 | Creative Tab Name | tab.\<namespace>.<registry_name>.name |
-
-
-#### [[Spawn Eggs]]
-
-| Object Type           | Translation Key Format                   |
-| --------------------- | ---------------------------------------- |
-| Spawn Egg Entity Name | entity.\<namespace>.<registry_name>.name |
