@@ -1,3 +1,14 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+
+/* Disables the button for empty folders so they don't toggle or look clickable */
+.explorer .folder-container:not(:has(ul li)) > button.folder-button {
+  pointer-events: none;
+  cursor: default;
+}
+
+/* Hides the SVG arrow icon on empty folders */
+.explorer .folder-container:not(:has(ul li)) > button.folder-button .folder-icon {
+  display: none;
+}
