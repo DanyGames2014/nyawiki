@@ -13,13 +13,13 @@ You can read more about mixins [here](Introduction%20to%20Mixins.md).
 ## Class Tweaking
 Class tweaking provides powerful a collection of features for working with the game's code:
 
-**Access Widening**  [official documentation](https://docs.fabricmc.net/develop/class-tweakers/access-widening)
+**Access Widening** [official documentation](https://docs.fabricmc.net/develop/class-tweakers/access-widening)  
 Allows you to widen the access parameters of a class, method or a field, such as changing `private` to `public` or removing the `final` modifier.  
 
-**Interface Injection**  [official documentation](https://docs.fabricmc.net/develop/class-tweakers/interface-injection)
+**Interface Injection** [official documentation](https://docs.fabricmc.net/develop/class-tweakers/interface-injection)  
 Allows you to inject custom interfaces into the game's classes, effectively adding your own methods to them which you can then call on them. The implementation of these methods is then either governed by a default method in the interface or implemented inside a mixin.  
 
-**Enum Extensions**  [official documentation](https://docs.fabricmc.net/develop/class-tweakers/enum-extension)
+**Enum Extensions** [official documentation](https://docs.fabricmc.net/develop/class-tweakers/enum-extension)  
 Allows you to add new entries to an existing enum in the game's code. Be careful with this, as code working with these enums might not expect your entries.  
 
 More about Class Tweakers can be found in the [official documentation](https://docs.fabricmc.net/develop/class-tweakers/).  
