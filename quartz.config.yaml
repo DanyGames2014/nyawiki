@@ -134,7 +134,7 @@ plugins:
     enabled: true
     options:
       title: Explorer
-      folderClickBehavior: collapse # "link" to navigate or "collapse" to toggle
+      folderClickBehavior: link # "link" to navigate or "collapse" to toggle
       folderDefaultState: collapsed # "collapsed" or "open"
       useSavedState: true
     layout:
