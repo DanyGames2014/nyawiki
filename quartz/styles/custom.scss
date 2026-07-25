@@ -2,13 +2,15 @@
 
 // put your custom CSS here!
 
-/* Disables the button for empty folders so they don't toggle or look clickable */
-.explorer .folder-container:not(:has(ul li)) > button.folder-button {
-  pointer-events: none;
-  cursor: default;
+/* 1. Hide the toggle arrow button for folders with no child items */
+.explorer .folder-container:not(:has(ul li)) > button.folder-button,
+.explorer .folder-container:has(ul:empty) > button.folder-button {
+  display: none !important;
 }
 
-/* Hides the SVG arrow icon on empty folders */
-.explorer .folder-container:not(:has(ul li)) > button.folder-button .folder-icon {
-  display: none;
+/* 2. Remove click interactions and pointer cursors from empty folder titles */
+.explorer .folder-container:not(:has(ul li)) > .folder-title,
+.explorer .folder-container:has(ul:empty) > .folder-title {
+  pointer-events: none;
+  cursor: default;
 }
