@@ -92,14 +92,14 @@ Both will have the same result
 &nbsp;  
 
 ### 4. Texturing the Block
-There are 2 way to texture a block, using the data driven StationAPI [Block Models](Block%20Model.md) or by using the Vanilla renderer. For both we will need a texture first, the texture needs to be in a PNG format. We will place the texture in `resources/assets/<modid>/stationapi/textures/block`, you can look at [Project Structure](Project%20Structure.md) for an example structure. Let's name our texture `example_block.png`  
+There are 2 way to texture a block, using the data driven StationAPI [Block Models](Block%20Model.md) or by using the Vanilla renderer. For both we will need a texture first, the texture needs to be in a PNG format. We will place the texture in `resources/assets/<namespace>/stationapi/textures/block`, you can look at [Project Structure](Project%20Structure.md) for an example structure. Let's name our texture `example_block.png`  
 I would recommend sticking with the Block Models, but vanilla renderer sometimes does come in handy.
 
 #### 4.1 StationAPI Block Models
 The usage of block models is described in detail in [Block Model](Block%20Model.md), so we will only briefly go over it.  
 Models can be defined for each combination of block states, this is documented in the [Block State](Block%20State.md) page. We will keep things single and only have one model, we haven't specified any block states anyway.  
 
-First we need to create a Block Model at `resources/assets/<modid>/stationapi/models/block/<model_name>.json`, for our example block I will place it at [resources/assets/examplemod/stationapi/models/block/example_block.json](https://github.com/DanyGames2014/nyawiki-example-mod/blob/master/src/main/resources/assets/examplemod/stationapi/models/block/example_block.json)  
+First we need to create a Block Model at `resources/assets/<namespace>/stationapi/models/block/<model_name>.json`, for our example block I will place it at [resources/assets/examplemod/stationapi/models/block/example_block.json](https://github.com/DanyGames2014/nyawiki-example-mod/blob/master/src/main/resources/assets/examplemod/stationapi/models/block/example_block.json)  
 
 ```json
 {
@@ -112,7 +112,7 @@ First we need to create a Block Model at `resources/assets/<modid>/stationapi/mo
 
 >[!info] When specifying texture path we specify it relative to `resources/assets/<namespace>/stationapi/textures` and without the file extension
 
-Now we need to create a blockstate json at `resources/assets/<modid>/stationapi/blockstates/<block_identifier>.json` to point at the model, since we are not dealing with block states, we will point *"all"* variants to out block model.   
+Now we need to create a blockstate json at `resources/assets/<namespace>/stationapi/blockstates/<block_identifier>.json` to point at the model, since we are not dealing with block states, we will point *"all"* variants to out block model.   
 In the case of the Example mod that file will be placed at [resources/assets/examplemod/stationapi/blockstates/example_block.json](https://github.com/DanyGames2014/nyawiki-example-mod/blob/master/src/main/resources/assets/examplemod/stationapi/blockstates/example_block.json)
 ```json
 {
@@ -123,6 +123,16 @@ In the case of the Example mod that file will be placed at [resources/assets/exa
 ```
 
 >[!note] Unlike Item Models, the Block Model file name does not need to match the block identifier, however it is still usually a good practice.  This is because we point to the model path in our blockstate json which DOES need to match the block identifier.  
+
+&nbsp;
+
+We also need to create a model for the BlockItem of this Block, otherwise the Block itself will have the texture and shape, but the BlockItem used to place it will just be a default missing texture block, to do this we need to create a model json at `resources/assets/<namespace>/stationapi/models/item/<block_identifier>.json` and just make this model inherit the model of our block, it needs to be named after the Identifier that our block has since that is the Identifier that the BlockItem used to place it will also have  
+
+```json
+{  
+  "parent": "examplemod:block/example_block"  
+}
+```
 
 &nbsp;
 #### 4.2 Vanilla Renderer
