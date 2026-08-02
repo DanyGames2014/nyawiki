@@ -28,14 +28,19 @@ git clone https://github.com/calmilamsy/stationapi-example-mod.git
 ```
 Replace the link above with the repository you generated.
 
+If you are using [GitHub Desktop](https://desktop.github.com/download/), login and clone the repository with the following actions:
+![GitHub Desktop Clone repository](./attachments/github_desktop_clone_repository.png)
+
+Follow the prompts and clone the repository to a folder of your choosing.
+
 If you do not wish to use GitHub or would like to do it at a later time, you may press on the "Download ZIP" button 
 pictured above to obtain a copy of the `stationapi-example-mod`. 
 
 ## Setup Java
 
-StationAPI requires a JVM (Java Virtual Machine) that supports Java 17 or higher. The current Java LTS is Java 25 which is **required** for modern Fabric Loom
+StationAPI requires a JVM (Java Virtual Machine) that supports Java 17 or higher. Java 21 or newer is **required** for modern Fabric Loom
 to build and run the example mod. Depending on the OS/distro you are using, the installation instructions differ and there are many vendors
-who provide Java 25.
+who provide Java for your machine.
 
 - [Eclipse Temurin](https://adoptium.net/temurin/)
 - [Amazon Coretto](https://aws.amazon.com/corretto/)
@@ -96,6 +101,9 @@ The bare minimum extensions are:
 
 I recommend installing Extension Pack for Java which includes this and more extensions to aid in the development of Java projects.
 
+Additionally, the [SpongePowered Mixin](https://marketplace.visualstudio.com/items?itemName=enbrain.vscode-spongepowered-mixin) plugin is also recommended
+to aid in the development of Mixins.
+
 See [Final Steps](#final-steps) to finish importing the project.
 
 ### Setting up without an IDE
@@ -118,6 +126,8 @@ gradlew _setup/setupMod # Windows CMD
 
 ./gradlew _setup/setupMod # macOS/Linux
 ```
+
+Or use the Gradle tasks widget to manually run these tasks.
 
 In this tutorial, you will have learned how to setup the `stationapi-example-mod` and how to import it into the IDE of your choice.
 
