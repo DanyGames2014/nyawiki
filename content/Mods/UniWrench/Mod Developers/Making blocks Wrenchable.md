@@ -43,6 +43,6 @@ public class UniWrenchCompatListener {
 ```
 
 The first argument is the Block that this action will be carried for, the second one is the function that will be carried out.  
-The function is a method with the following signature `(ItemStack stack, PlayerEntity player, boolean isSneaking, World world, int x, int y, int z, int side, WrenchMode wrenchMode)` which returns a `boolean` that reports back on if the action was succesfull.
+The function is a method with the following signature `(ItemStack stack, PlayerEntity player, boolean isSneaking, World world, int x, int y, int z, int side, WrenchMode wrenchMode)` which returns a `boolean` that reports back on if the action was successful.
 
 >[!hint] I would recommend just copying the method from the `Wrenchable` interface

@@ -1,0 +1,31 @@
+{
+	"nodes":[
+		{"id":"6109a0d196f4e98e","x":-840,"y":-195,"width":250,"height":60,"color":"5","type":"text","text":"Does the block implement the Wrenchable interface"},
+		{"id":"77c899bde32e2488","x":-1220,"y":-195,"width":250,"height":60,"type":"text","text":"Player uses a Wrench"},
+		{"id":"ae2a7f20d7f718b5","x":-840,"y":-20,"width":250,"height":60,"color":"3","type":"text","text":"Execute the Wrenchable action"},
+		{"id":"956671cbad2e8438","x":-840,"y":160,"width":250,"height":60,"color":"4","type":"text","text":"Wrench action succeded"},
+		{"id":"6de40a18576a35fd","x":-390,"y":-210,"width":250,"height":90,"color":"5","type":"text","text":"Does the Block have an action registered in the WrenchableBlockRegistry"},
+		{"id":"9e3037cb2ab21ba1","x":-390,"y":-20,"width":250,"height":60,"color":"3","type":"text","text":"Execute the WrenchableBlock\nRegistry action"},
+		{"id":"ccfd0437f6bc70d9","type":"text","text":"Wrench action succeded","x":-390,"y":160,"width":250,"height":60,"color":"4"},
+		{"id":"efdf85e800d13d33","type":"text","text":"Wrench action succeded","x":60,"y":160,"width":250,"height":60,"color":"4"},
+		{"id":"9979f13e04cadba2","type":"text","text":"Wrench action succeded","x":510,"y":160,"width":250,"height":60,"color":"4"},
+		{"id":"ea535f3e35bd5fc8","x":60,"y":-195,"width":250,"height":60,"color":"3","type":"text","text":"Execute the wrench action"},
+		{"id":"650c19f778159e52","x":510,"y":-195,"width":250,"height":60,"color":"3","type":"text","text":"Execute the wrench mode action"},
+		{"id":"d7a204de76966ea8","x":960,"y":-195,"width":250,"height":60,"color":"1","type":"text","text":"Wrench action failed"}
+	],
+	"edges":[
+		{"id":"3b9af02f132c6e29","fromNode":"6109a0d196f4e98e","fromSide":"bottom","toNode":"ae2a7f20d7f718b5","toSide":"top","label":"Yes"},
+		{"id":"c4cd1e121b0d00ba","fromNode":"6109a0d196f4e98e","fromSide":"right","toNode":"6de40a18576a35fd","toSide":"left","label":"No"},
+		{"id":"09318033bef719af","fromNode":"ae2a7f20d7f718b5","fromSide":"right","toNode":"6de40a18576a35fd","toSide":"left","label":"false"},
+		{"id":"71fd08222f7f9b99","fromNode":"ae2a7f20d7f718b5","fromSide":"bottom","toNode":"956671cbad2e8438","toSide":"top","label":"true"},
+		{"id":"bb69356fee0b05e1","fromNode":"77c899bde32e2488","fromSide":"right","toNode":"6109a0d196f4e98e","toSide":"left"},
+		{"id":"c9c8580542dac73f","fromNode":"6de40a18576a35fd","fromSide":"right","toNode":"ea535f3e35bd5fc8","toSide":"left","label":"No"},
+		{"id":"f1a194d20444fb80","fromNode":"6de40a18576a35fd","fromSide":"bottom","toNode":"9e3037cb2ab21ba1","toSide":"top","label":"Yes"},
+		{"id":"b1f01a65979eac88","fromNode":"9e3037cb2ab21ba1","fromSide":"right","toNode":"ea535f3e35bd5fc8","toSide":"left","label":"false"},
+		{"id":"b7f4b19b9a50acce","fromNode":"9e3037cb2ab21ba1","fromSide":"bottom","toNode":"ccfd0437f6bc70d9","toSide":"top","label":"true"},
+		{"id":"faa14ffd0b8b957c","fromNode":"ea535f3e35bd5fc8","fromSide":"bottom","toNode":"efdf85e800d13d33","toSide":"top","label":"true"},
+		{"id":"2eb496b1be52ed81","fromNode":"650c19f778159e52","fromSide":"bottom","toNode":"9979f13e04cadba2","toSide":"top","label":"true"},
+		{"id":"feffcb7882dfd59a","fromNode":"650c19f778159e52","fromSide":"right","toNode":"d7a204de76966ea8","toSide":"left","label":"false"},
+		{"id":"688645be1aa15030","fromNode":"ea535f3e35bd5fc8","fromSide":"right","toNode":"650c19f778159e52","toSide":"left","label":"false"}
+	]
+}
